@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import * as bootstrap from 'bootstrap';
 
 @Component({
@@ -7,7 +7,7 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
+@Input() item:any;
   constructor() { }
 
   ngOnInit(): void { 

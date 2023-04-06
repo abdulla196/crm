@@ -1,6 +1,6 @@
-<div class="card">
+<div class="card" *ngIf="item">
     <div class="card-body">
-        <h5 class="card-title">Statoil Asa</h5>
+        <h5 class="card-title">{{item.first_name+' '+item.last_name}}</h5>
         <button class="btn" style="background-color: lightgrey;"> Returning </button>
         <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="probability status 100%.">
