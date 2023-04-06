@@ -1,0 +1,22 @@
+.card {
+    width: 15rem;
+    height: 9rem;
+    border: 2px solid lightgray;
+    border-radius: 1rem;
+}
+
+.btn {
+    display: inline;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.2rem;
+    font-weight: 700;
+}
+
+.details {
+    font-size: 0.7rem;
+    color: darkgray;
+}
+

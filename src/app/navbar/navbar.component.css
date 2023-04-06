@@ -1,0 +1,42 @@
+.btn {
+    background-color: white;
+    border: 1px solid lightgray;
+    color: darkgray;
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+
+.btn-add{
+    font-size: 0.7rem;
+    background-color: darkblue;
+    color: white;
+    padding: 0.7rem;
+    width: 6.5rem;
+}
+
+.nav-2 {
+    color: darkgray;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+.nav-2:hover{
+    color: darkblue;
+    text-decoration: underline 2px darkblue;
+}
+
+.nav-3 {
+    color: darkgray;
+    font-weight: 500;
+}
+
+.nav-3:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 2px 2px gray;
+    border-radius: 5px;
+}
+
+
+

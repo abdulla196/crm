@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="example-container">
+        <h3>Potential Value</h3>
+        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+        </button>
+        <i class="t-icon fa-solid fa-bell"> 2</i>
+        <div cdkDropList #potentialList="cdkDropList" [cdkDropListData]="potential" [cdkDropListConnectedTo]="[focusList,contactList,offerList,gettingList]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of potential" cdkDrag><app-card></app-card></div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h3>Focus</h3>
+        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+        </button> 
+        <i class="t-icon fa-solid fa-bell"> 2</i>
+        <div cdkDropList #focusList="cdkDropList" [cdkDropListData]="focus" [cdkDropListConnectedTo]="[contactList,potentialList,offerList,gettingList]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of focus" cdkDrag><app-card></app-card></div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h3>Contact Made</h3>
+        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+        </button> 
+        <i class="t-icon fa-solid fa-bell"> 2</i>
+        <div cdkDropList #contactList="cdkDropList" [cdkDropListData]="contact" [cdkDropListConnectedTo]="[focusList,potentialList,offerList,gettingList]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of contact" cdkDrag><app-card></app-card></div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h3>Offer Sent</h3>
+        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+        </button> 
+        <i class="t-icon fa-solid fa-bell"> 2</i>
+        <div cdkDropList #offerList="cdkDropList" [cdkDropListData]="offer" [cdkDropListConnectedTo]="[potentialList,focusList,contactList,gettingList]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of offer" cdkDrag><app-card></app-card></div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h3>Getting Ready</h3>
+        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+        </button> 
+        <i class="t-icon fa-solid fa-bell"> 2</i>
+        <div cdkDropList #gettingList="cdkDropList" [cdkDropListData]="getting" [cdkDropListConnectedTo]="[focusList,contactList,offerList,potentialList]"
+            class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of getting" cdkDrag><app-card></app-card></div>
+        </div>
+    </div>
+</div>
