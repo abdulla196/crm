@@ -11,7 +11,10 @@ import * as bootstrap from 'bootstrap';
 })
 export class DragDropComponent implements OnInit {
 
-  constructor(
+  // term: string='';
+  term:any;
+
+    constructor(
     private DealsService:DealsService
   ) { }
 
@@ -57,7 +60,7 @@ export class DragDropComponent implements OnInit {
   private _updateDeals(data:any,value:string){
     this.DealsService.updateDeals(data,value).subscribe((res:any)=>{
       data.status =res.status
-      this.contact.push(data)
+      // this.contact.push(data)
     })
   }
   drop(event: CdkDragDrop<string[]>,value:string) {

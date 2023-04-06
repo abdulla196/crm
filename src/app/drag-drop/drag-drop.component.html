@@ -1,4 +1,5 @@
 <div class="container">
+    <input type="text" class="form-control me-2" placeholder="Search Here" [(ngModel)]="term">
     <div class="example-container">
         <h3>Potential Value</h3>
         <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
@@ -7,9 +8,11 @@
             <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
         </button>
         <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #potentialList="cdkDropList" [cdkDropListData]="potential" [cdkDropListConnectedTo]="[focusList,contactList,offerList,gettingList]"
-            class="example-list" (cdkDropListDropped)="drop($event,'Potential Value')">
-            <div class="example-box" *ngFor="let item of potential" cdkDrag><app-card [item]="item"></app-card></div>
+        <div cdkDropList #potentialList="cdkDropList" [cdkDropListData]="potential"
+            [cdkDropListConnectedTo]="[focusList,contactList,offerList,gettingList]" class="example-list"
+            (cdkDropListDropped)="drop($event,'Potential Value')">
+            <div class="example-box" *ngFor="let item of potential | filter:term" cdkDrag><app-card
+                    [items]="item"></app-card></div>
         </div>
     </div>
 
@@ -19,11 +22,13 @@
         <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
             <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button> 
+        </button>
         <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #focusList="cdkDropList" [cdkDropListData]="focus" [cdkDropListConnectedTo]="[contactList,potentialList,offerList,gettingList]"
-            class="example-list" (cdkDropListDropped)="drop($event,'Focus')">
-            <div class="example-box" *ngFor="let item of focus" cdkDrag><app-card [item]="item"></app-card></div>
+        <div cdkDropList #focusList="cdkDropList" [cdkDropListData]="focus"
+            [cdkDropListConnectedTo]="[contactList,potentialList,offerList,gettingList]" class="example-list"
+            (cdkDropListDropped)="drop($event,'Focus')">
+            <div class="example-box" *ngFor="let item of focus | filter:term" cdkDrag><app-card
+                    [items]="item"></app-card></div>
         </div>
     </div>
 
@@ -33,11 +38,13 @@
         <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
             <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button> 
+        </button>
         <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #contactList="cdkDropList" [cdkDropListData]="contact" [cdkDropListConnectedTo]="[focusList,potentialList,offerList,gettingList]"
-            class="example-list" (cdkDropListDropped)="drop($event,'Contact Made')">
-            <div class="example-box" *ngFor="let item of contact" cdkDrag><app-card [item]="item"></app-card></div>
+        <div cdkDropList #contactList="cdkDropList" [cdkDropListData]="contact"
+            [cdkDropListConnectedTo]="[focusList,potentialList,offerList,gettingList]" class="example-list"
+            (cdkDropListDropped)="drop($event,'Contact Made')">
+            <div class="example-box" *ngFor="let item of contact | filter:term" cdkDrag><app-card
+                    [items]="item"></app-card></div>
         </div>
     </div>
 
@@ -47,11 +54,13 @@
         <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
             <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button> 
+        </button>
         <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #offerList="cdkDropList" [cdkDropListData]="offer" [cdkDropListConnectedTo]="[potentialList,focusList,contactList,gettingList]"
-            class="example-list" (cdkDropListDropped)="drop($event,'Offer Sent')">
-            <div class="example-box" *ngFor="let item of offer" cdkDrag><app-card [item]="item"></app-card></div>
+        <div cdkDropList #offerList="cdkDropList" [cdkDropListData]="offer"
+            [cdkDropListConnectedTo]="[potentialList,focusList,contactList,gettingList]" class="example-list"
+            (cdkDropListDropped)="drop($event,'Offer Sent')">
+            <div class="example-box" *ngFor="let item of offer | filter:term" cdkDrag><app-card
+                    [items]="item"></app-card></div>
         </div>
     </div>
 
@@ -61,11 +70,13 @@
         <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
             <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button> 
+        </button>
         <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #gettingList="cdkDropList" [cdkDropListData]="getting" [cdkDropListConnectedTo]="[focusList,contactList,offerList,potentialList]"
-            class="example-list" (cdkDropListDropped)="drop($event,'Getting Ready')">
-            <div class="example-box" *ngFor="let item of getting" cdkDrag><app-card [item]="item"></app-card></div>
+        <div cdkDropList #gettingList="cdkDropList" [cdkDropListData]="getting"
+            [cdkDropListConnectedTo]="[focusList,contactList,offerList,potentialList]" class="example-list"
+            (cdkDropListDropped)="drop($event,'Getting Ready')">
+            <div class="example-box" *ngFor="let item of getting | filter:term" cdkDrag><app-card
+                    [items]="item"></app-card></div>
         </div>
     </div>
 </div>

@@ -1,0 +1,15 @@
+.btn {
+    background-color: white;
+    border: 1px solid lightgray;
+    color: darkgray;
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+
+.btn-add{
+    font-size: 0.7rem;
+    background-color: darkblue;
+    color: white;
+    padding: 0.7rem;
+    width: 6.5rem;
+}

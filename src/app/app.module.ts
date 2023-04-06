@@ -10,14 +10,18 @@ import { CardComponent } from './card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { SearchPipe } from './pipes/search.pipe';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { DealsComponent } from './deals/deals.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CardComponent,
-    DragDropComponent
+    DragDropComponent,
+    SearchPipe,
+    DealsComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatTableModule,
     DragDropModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
