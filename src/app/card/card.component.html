@@ -1,4 +1,3 @@
-
 <div class="card" *ngIf="items">
     <div class="card-body">
         <h5 class="card-title">{{items.first_name+' '+items.last_name}}</h5>
@@ -8,9 +7,12 @@
             {{items.probability_status}}
         </button>
         <div class="details">
-            <i class="fa-sharp fa-solid fa-phone">{{items.company}}</i>
-            <i class="phone"> {{items.phone}}</i>
-            <i class="fa-regular fa-calendar">{{items.date}}</i>
+            <i class="comp-name fa-sharp fa-solid fa-phone"><span>{{items.company}}</span></i>
+            <i class="phone"><span>{{items.phone}}</span></i>
+            <br>
+            <i class="fa-solid fa-at"><span>{{items.email}}</span></i>
+            <br>
+            <i class="fa-regular fa-calendar"><span>{{items.date}}</span></i>
         </div>
     </div>
 </div>

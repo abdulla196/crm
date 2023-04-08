@@ -1,34 +1,98 @@
-.btn {
-    background-color: white;
-    border: 1px solid lightgray;
-    color: darkgray;
-    border-radius: 5px;
-    margin: 0.2rem;
+.span-line {
+  background-color: red;
+  width: 3px;
+  height: 3.5rem;
+}
+
+@media (max-width: 1000px) {
+  .span-line {
+    height: 3px;
+    width: 8rem;
+    margin-bottom: 5px;
+  }
+}
+
+.name-li {
+  margin-right: 1.3rem;
+  margin-left: 5px;
+}
+
+.num-name {
+  font-size: 0.8rem;
+  color: gray;
+  font-weight: 700;
+}
+
+.num {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.header-ul li {
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.header-ul li a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .header-ul li {
+    display: inline-block;
+  }
+
+  .header-ul {
+    text-align: center;
+  }
 }
 
 .nav-2 {
-    color: darkgray;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-right: 2rem;
+  color: darkgray;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-right: 2rem;
 }
 
-.nav-2:hover{
-    color: darkblue;
-    text-decoration: underline 2px darkblue;
+.nav-2:hover {
+  color: darkblue;
+  text-decoration: underline 2px darkblue;
+}
+
+.last-ul{
+  margin-top: 10px;
+}
+.last-ul li {
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.last-ul li a {
+  text-decoration: none;
 }
 
 .nav-3 {
-    color: darkgray;
-    font-weight: 500;
+  color: darkgray;
+  font-weight: 500;
+  margin-right: 2rem; 
 }
 
 .nav-3:hover {
-    color: black;
-    background-color: white;
-    box-shadow: 2px 2px gray;
-    border-radius: 5px;
+  color: black;
+  background-color: white;
+  box-shadow: 2px 2px gray;
+  border-radius: 5px;
+  padding: 10px;
 }
 
+@media (max-width: 600px) {
+  .last-ul li {
+    display: inline-block;
+  }
 
-
+  .last-ul {
+    text-align: center;
+  }
+}

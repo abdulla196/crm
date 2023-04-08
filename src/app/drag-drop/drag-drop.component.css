@@ -1,3 +1,45 @@
+.header-ul li {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.Deals{
+    margin-right: 30.5rem;
+}
+
+@media (max-width: 1500px) {
+    .header-ul li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .Deals{
+        margin-right: 10px;
+    }
+
+    .header-ul {
+        text-align: center;
+    }
+}
+
+.btn-dropdown {
+    background-color: white;
+    border: 1px solid lightgray;
+    color: darkgray;
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+
+.btn-add {
+    font-size: 0.7rem;
+    background-color: darkblue;
+    color: white;
+    padding: 0.7rem;
+    width: 6.5rem;
+}
+
 .example-container {
     width: 16rem;
     max-width: 100%;
@@ -31,7 +73,7 @@
     font-size: 14px;
 }
 
-.btn-po{
+.btn-po {
     background-color: transparent;
     padding: 0px;
     border: none;
@@ -40,11 +82,14 @@
 h3 {
     margin-left: 1rem;
     color: darkblue;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0;
 }
 
 .t-icon {
     margin-right: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: gray;
     margin-left: 1rem;
 }
@@ -72,3 +117,4 @@ h3 {
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+

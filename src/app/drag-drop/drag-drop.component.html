@@ -1,82 +1,183 @@
+<!-- <div class="container">
+    <nav class="nav">
+        <h2 class="Deals" style="margin-right: 27.6rem; margin-top: 5px;">Deals</h2>
+        <div class="dropdown">
+            <button class="btn-dropdown btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                segment: All
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn-dropdown btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Assignee: All
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn-dropdown btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Status: All
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <ul>
+            <input type="text" class="form-control me-2" style="width: 10rem;" placeholder="Search Here..." [(ngModel)]="term">
+        </ul>
+        <ul>
+            <button class="btn-add btn btn-primary" type="submit"><i class="fa-solid fa-circle-plus"
+                    style="margin-right: 10px; font-size: 0.9rem;"></i>ADD DEAL</button>
+        </ul>
+    </nav>
+</div> -->
+
+<header class="nav" style="padding: 10px;">
+    <div class="container">
+        <ul class="header-ul">
+            <li style="margin: 0;">
+                <h2 class="Deals">Deals</h2>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn-dropdown btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        segment: All
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><input type="checkbox"> Segment A (22)</li>
+                        <li><input type="checkbox"> Segment B (7)</li>
+                        <li><input type="checkbox"> Segment C (14)</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn-dropdown btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        segment: All
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn-dropdown btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        segment: All
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input type="text" class="form-control me-2" style="width: 10rem;" placeholder="Search Here..." [(ngModel)]="term">
+            </li>
+            <li>
+                <button class="btn-add btn btn-primary" type="submit"><i class="fa-solid fa-circle-plus"
+                    style="margin-right: 10px; font-size: 0.9rem;"></i>ADD DEAL</button>
+            </li>
+        </ul>
+    </div>
+</header>
+
 <div class="container">
-    <input type="text" class="form-control me-2" placeholder="Search Here" [(ngModel)]="term">
-    <div class="example-container">
-        <h3>Potential Value</h3>
-        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
-        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
-            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button>
-        <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #potentialList="cdkDropList" [cdkDropListData]="potential"
-            [cdkDropListConnectedTo]="[focusList,contactList,offerList,gettingList]" class="example-list"
-            (cdkDropListDropped)="drop($event,'Potential Value')">
-            <div class="example-box" *ngFor="let item of potential | filter:term" cdkDrag><app-card
-                    [items]="item"></app-card></div>
+        <div class="example-container">
+            <h3>Potential Value</h3>
+            <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+            <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+                <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+            </button>
+            <i class="t-icon fa-solid fa-bell"> 2</i>
+            <div cdkDropList #potentialList="cdkDropList" [cdkDropListData]="potential"
+                [cdkDropListConnectedTo]="[focusList,contactList,offerList,gettingList]" class="example-list"
+                (cdkDropListDropped)="drop($event,'Potential Value')">
+                <div class="example-box" *ngFor="let item of potential | filter:term" cdkDrag><app-card
+                        [items]="item"></app-card></div>
+            </div>
         </div>
-    </div>
 
-    <div class="example-container">
-        <h3>Focus</h3>
-        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
-        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
-            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button>
-        <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #focusList="cdkDropList" [cdkDropListData]="focus"
-            [cdkDropListConnectedTo]="[contactList,potentialList,offerList,gettingList]" class="example-list"
-            (cdkDropListDropped)="drop($event,'Focus')">
-            <div class="example-box" *ngFor="let item of focus | filter:term" cdkDrag><app-card
-                    [items]="item"></app-card></div>
+        <div class="example-container">
+            <h3>Focus</h3>
+            <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+            <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+                <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+            </button>
+            <i class="t-icon fa-solid fa-bell"> 2</i>
+            <div cdkDropList #focusList="cdkDropList" [cdkDropListData]="focus"
+                [cdkDropListConnectedTo]="[contactList,potentialList,offerList,gettingList]" class="example-list"
+                (cdkDropListDropped)="drop($event,'Focus')">
+                <div class="example-box" *ngFor="let item of focus | filter:term" cdkDrag><app-card
+                        [items]="item"></app-card></div>
+            </div>
         </div>
-    </div>
 
-    <div class="example-container">
-        <h3>Contact Made</h3>
-        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
-        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
-            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button>
-        <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #contactList="cdkDropList" [cdkDropListData]="contact"
-            [cdkDropListConnectedTo]="[focusList,potentialList,offerList,gettingList]" class="example-list"
-            (cdkDropListDropped)="drop($event,'Contact Made')">
-            <div class="example-box" *ngFor="let item of contact | filter:term" cdkDrag><app-card
-                    [items]="item"></app-card></div>
+        <div class="example-container">
+            <h3>Contact Made</h3>
+            <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+            <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+                <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+            </button>
+            <i class="t-icon fa-solid fa-bell"> 2</i>
+            <div cdkDropList #contactList="cdkDropList" [cdkDropListData]="contact"
+                [cdkDropListConnectedTo]="[focusList,potentialList,offerList,gettingList]" class="example-list"
+                (cdkDropListDropped)="drop($event,'Contact Made')">
+                <div class="example-box" *ngFor="let item of contact | filter:term" cdkDrag><app-card
+                        [items]="item"></app-card></div>
+            </div>
         </div>
-    </div>
 
-    <div class="example-container">
-        <h3>Offer Sent</h3>
-        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
-        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
-            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button>
-        <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #offerList="cdkDropList" [cdkDropListData]="offer"
-            [cdkDropListConnectedTo]="[potentialList,focusList,contactList,gettingList]" class="example-list"
-            (cdkDropListDropped)="drop($event,'Offer Sent')">
-            <div class="example-box" *ngFor="let item of offer | filter:term" cdkDrag><app-card
-                    [items]="item"></app-card></div>
+        <div class="example-container">
+            <h3>Offer Sent</h3>
+            <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+            <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+                <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+            </button>
+            <i class="t-icon fa-solid fa-bell"> 2</i>
+            <div cdkDropList #offerList="cdkDropList" [cdkDropListData]="offer"
+                [cdkDropListConnectedTo]="[potentialList,focusList,contactList,gettingList]" class="example-list"
+                (cdkDropListDropped)="drop($event,'Offer Sent')">
+                <div class="example-box" *ngFor="let item of offer | filter:term" cdkDrag><app-card
+                        [items]="item"></app-card></div>
+            </div>
         </div>
-    </div>
 
-    <div class="example-container">
-        <h3>Getting Ready</h3>
-        <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
-        <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
-            <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
-        </button>
-        <i class="t-icon fa-solid fa-bell"> 2</i>
-        <div cdkDropList #gettingList="cdkDropList" [cdkDropListData]="getting"
-            [cdkDropListConnectedTo]="[focusList,contactList,offerList,potentialList]" class="example-list"
-            (cdkDropListDropped)="drop($event,'Getting Ready')">
-            <div class="example-box" *ngFor="let item of getting | filter:term" cdkDrag><app-card
-                    [items]="item"></app-card></div>
+        <div class="example-container">
+            <h3>Getting Ready</h3>
+            <i class="t-icon fa-solid fa-clipboard-list"> 29</i>
+            <button type="button" class="btn-po btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Total Potential Value 1 223 834 NDK 29 Deals">
+                <i class="t-icon fa-solid fa-square-minus"> 1.2 min</i>
+            </button>
+            <i class="t-icon fa-solid fa-bell"> 2</i>
+            <div cdkDropList #gettingList="cdkDropList" [cdkDropListData]="getting"
+                [cdkDropListConnectedTo]="[focusList,contactList,offerList,potentialList]" class="example-list"
+                (cdkDropListDropped)="drop($event,'Getting Ready')">
+                <div class="example-box" *ngFor="let item of getting | filter:term" cdkDrag><app-card
+                        [items]="item"></app-card></div>
+            </div>
         </div>
     </div>
-</div>

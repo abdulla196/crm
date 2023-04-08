@@ -14,6 +14,7 @@ import { SearchPipe } from './pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DealsComponent } from './deals/deals.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { DealsComponent } from './deals/deals.component';
     DragDropComponent,
     SearchPipe,
     DealsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

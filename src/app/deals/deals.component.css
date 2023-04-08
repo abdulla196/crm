@@ -1,15 +1,37 @@
-.btn {
-    background-color: white;
-    border: 1px solid lightgray;
-    color: darkgray;
-    border-radius: 5px;
-    margin: 0.2rem;
+/* .last-ul {
+    margin-top: 10px;
 }
 
-.btn-add{
-    font-size: 0.7rem;
-    background-color: darkblue;
-    color: white;
-    padding: 0.7rem;
-    width: 6.5rem;
+.last-ul li {
+    display: inline;
+    list-style-type: none;
+    text-decoration: none;
 }
+
+.last-ul li a {
+    text-decoration: none;
+}
+
+.nav-3 {
+    color: darkgray;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+.nav-3:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 2px 2px gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .last-ul li {
+        display: inline-block;
+    }
+
+    .last-ul {
+        text-align: center;
+    }
+} */
